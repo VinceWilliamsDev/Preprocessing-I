@@ -48,12 +48,25 @@ table {
 	border-spacing: 0;
 }
 
+// Variables
+
+@titleFont: 'Lora', serif; // for for my name
+@headingFont: 'Rubik', sans-serif; // fonts for headings
+@generalFont: 'Cormorant Garamond', serif; // for use everywhere else
+
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-family: @generalFont;
 }
+
+// set font size on the document
+html {
+	font-size: 62.5%;
+}
+
 
