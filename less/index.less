@@ -112,16 +112,29 @@ li {
 a {
 	text-decoration: none;
 }
-// Header Stylings
-header {
 
+// Header Stylings
+
+header {
 	background-color: @headerBackground;
 	.centeredColumn;
+
+	nav {
+		font-size: 2rem;
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
+		margin: .5% 0 0 0;
+
+		a {
+			margin: 0 1% 0 0
+		}
+	}
 
 	h1 {
 		font-size: 5rem;
 		font-family: @titleFont;
-		padding: 2.5% 0 0 0;
+		padding: 1.5% 0 0 0;
 	} //h1
 	
 	h3 {
@@ -154,7 +167,7 @@ header {
 
 //Profile section
 
-.profile {
+#profile {
 	.centeredColumn;
 	border-top: 3px @borderColor solid;
 	border-bottom: 3px @borderColor solid;
@@ -168,7 +181,7 @@ header {
 	} //p
 }  //profile
 
-.employment-history {
+#employment-history {
 	.centeredColumn;
 
 	h2 {
@@ -186,7 +199,7 @@ header {
 	}
 } //employment history
 
-.education {
+#education {
 	.centeredColumn;
 	width: 100%;
 
@@ -202,7 +215,7 @@ header {
 
 } //education
 
-.skills {
+#skills {
 	.centeredColumn;
 
 	h2 {

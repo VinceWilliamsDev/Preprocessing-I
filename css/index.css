@@ -165,10 +165,20 @@ header {
   flex-direction: column;
   align-items: center;
 }
+header nav {
+  font-size: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 0.5% 0 0 0;
+}
+header nav a {
+  margin: 0 1% 0 0;
+}
 header h1 {
   font-size: 5rem;
   font-family: 'Lora', serif;
-  padding: 2.5% 0 0 0;
+  padding: 1.5% 0 0 0;
 }
 header h3 {
   padding: 1% 0;
@@ -189,72 +199,72 @@ header address .contact-info {
 header address .contact-info #github-link {
   margin-left: 5%;
 }
-.profile {
+#profile {
   display: flex;
   flex-direction: column;
   align-items: center;
   border-top: 3px black solid;
   border-bottom: 3px black solid;
 }
-.profile h2 {
+#profile h2 {
   padding: 2.5% 0;
 }
-.profile p {
+#profile p {
   padding: 0 0 1% 0;
 }
-.employment-history {
+#employment-history {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.employment-history h2 {
+#employment-history h2 {
   margin: 2% 0;
   background-color: darkgrey;
   padding: 0.5% 10%;
 }
-.employment-history .job {
+#employment-history .job {
   margin: 1% 0;
   width: 40vw;
 }
-.employment-history .job .job-title {
+#employment-history .job .job-title {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2%;
 }
-.education {
+#education {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
-.education h2 {
+#education h2 {
   margin: 2% 0;
   background-color: darkgrey;
   padding: 0.5% 10%;
 }
-.education .credential {
+#education .credential {
   margin: 1% 0;
   width: 40vw;
   line-height: 1.5;
 }
-.skills {
+#skills {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.skills h2 {
+#skills h2 {
   margin: 2% 0;
   background-color: darkgrey;
   padding: 0.5% 10%;
 }
-.skills ul {
+#skills ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   list-style-type: circle;
   width: 40vw;
 }
-.skills ul li {
+#skills ul li {
   width: 50%;
   padding: 1% 0%;
   align-items: center;
