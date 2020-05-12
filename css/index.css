@@ -211,6 +211,7 @@ header address .contact-info #github-link {
 }
 #profile p {
   padding: 0 0 1% 0;
+  width: 60vw;
 }
 #employment-history {
   display: flex;
@@ -230,6 +231,12 @@ header address .contact-info #github-link {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2%;
+}
+#employment-history .job .job-title h4 {
+  text-decoration: underline;
+}
+#employment-history .job p {
+  line-height: 1.4;
 }
 #education {
   display: flex;
@@ -275,7 +282,7 @@ footer {
 footer .footer-contact {
   display: flex;
   justify-content: space-around;
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding: 2% 0 2% 0;
   margin: 3% 0 0 0;
 }
