@@ -172,6 +172,11 @@ header nav {
   width: 100%;
   margin: 0.5% 0 0 0;
 }
+@media (max-width: 500px) {
+  header nav {
+    justify-content: space-around;
+  }
+}
 header nav a {
   margin: 0 1% 0 0;
 }
@@ -199,6 +204,15 @@ header address .contact-info {
 header address .contact-info #github-link {
   margin-left: 5%;
 }
+@media (max-width: 500px) {
+  header address .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  header address .contact-info a {
+    margin: 0.5% 0;
+  }
+}
 #profile {
   display: flex;
   flex-direction: column;
@@ -212,6 +226,11 @@ header address .contact-info #github-link {
 #profile p {
   padding: 0 0 1% 0;
   width: 60vw;
+}
+@media (max-width: 500px) {
+  #profile p {
+    width: 90vw;
+  }
 }
 #employment-history {
   display: flex;
@@ -235,8 +254,26 @@ header address .contact-info #github-link {
 #employment-history .job .job-title h4 {
   text-decoration: underline;
 }
+@media (max-width: 500px) {
+  #employment-history .job .job-title {
+    flex-direction: column;
+  }
+  #employment-history .job .job-title div {
+    margin: 2% 0;
+  }
+}
 #employment-history .job p {
   line-height: 1.4;
+}
+@media (max-width: 500px) {
+  #employment-history .job p {
+    margin: 0 3%;
+  }
+}
+@media (max-width: 500px) {
+  #employment-history .job {
+    width: 90vw;
+  }
 }
 #education {
   display: flex;
@@ -253,6 +290,11 @@ header address .contact-info #github-link {
   margin: 1% 0;
   width: 40vw;
   line-height: 1.5;
+}
+@media (max-width: 500px) {
+  #education .credential {
+    width: 90vw;
+  }
 }
 #skills {
   display: flex;
@@ -276,6 +318,16 @@ header address .contact-info #github-link {
   padding: 1% 0%;
   align-items: center;
 }
+@media (max-width: 500px) {
+  #skills ul li {
+    width: 60%;
+  }
+}
+@media (max-width: 500px) {
+  #skills ul {
+    width: 90vw;
+  }
+}
 footer {
   background-color: darkgrey;
 }
@@ -285,4 +337,13 @@ footer .footer-contact {
   font-size: 2rem;
   padding: 2% 0 2% 0;
   margin: 3% 0 0 0;
+}
+@media (max-width: 500px) {
+  footer .footer-contact {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-contact a {
+    margin: 1% 0;
+  }
 }
