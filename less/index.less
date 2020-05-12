@@ -48,12 +48,265 @@ table {
 	border-spacing: 0;
 }
 
+// Variables and mixins
+
+@titleFont: 'Lora', serif; // for for my name
+// @headingFont: 'Rubik', sans-serif; // fonts for headings
+@generalFont: 'Cormorant Garamond', serif; // for use everywhere else
+@headerBackground: darkgrey;
+@borderColor: black;
+
+.centeredColumn() {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contentHeaderSpacing() {
+	margin: 2% 0;
+	background-color: darkgrey;
+	padding: .5% 10%;
+}
+
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-family: @generalFont;
+	line-height: 1.2;
+} // html and body
+
+// General stylings
+html {
+	font-size: 62.5%;
+} //html
+
+// h2, h3, h4, h5, h6 {
+// 	font-family: @headingFont;
+// } // headers
+
+h2 {
+	font-size: 3rem;
+} //h2
+
+h3 {
+	font-size: 2.5rem;
+	font-weight: 400;
+} //h3
+
+h4 {
+	font-size: 2rem;
+} //h4
+
+p, span {
+	font-size: 2rem;
+} //p
+
+li {
+	font-size: 2rem;
+} //li
+
+a {
+	text-decoration: none;
 }
 
+// Header Stylings
+
+header {
+	background-color: @headerBackground;
+	.centeredColumn;
+
+	nav {
+		font-size: 2rem;
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
+		margin: .5% 0 0 0;
+
+		@media(max-width: 500px) {
+			justify-content: space-around;
+		}
+
+		a {
+			margin: 0 1% 0 0
+		}
+	}
+
+	h1 {
+		font-size: 5rem;
+		font-family: @titleFont;
+		padding: 1.5% 0 0 0;
+	} //h1
+	
+	h3 {
+		padding: 1% 0;
+	} //h3
+
+	address {
+		.centeredColumn;
+		font-size: 2rem;
+		width: 100%;
+
+		.contact-info {
+			display: flex;
+			justify-content: space-around;
+			width: 100%;
+			padding: 1% 0 .5% 0;
+
+			#github-link {
+				margin-left: 5%;
+			} //github link
+
+			@media(max-width: 500px) {
+				flex-direction: column;
+				align-items: center;
+				
+				a {
+					margin: 0.5% 0;
+				}
+			}
+		} //contact info
+	} //address
+} //header
+
+//content style
+
+// .content {
+// 	.centeredColumn;
+// }
+
+//Profile section
+
+#profile {
+	.centeredColumn;
+	border-top: 3px @borderColor solid;
+	border-bottom: 3px @borderColor solid;
+
+	h2 {
+		padding: 2.5% 0;
+	} //h2
+
+	p {
+		padding: 0 0 1% 0;
+		width: 60vw;
+
+		@media(max-width: 500px) {
+			width: 90vw;
+		}
+	} //p
+}  //profile
+
+#employment-history {
+	.centeredColumn;
+
+	h2 {
+		.contentHeaderSpacing;
+	} //h2
+
+	.job {
+		margin: 1% 0;
+		width: 40vw;
+		.job-title {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 2%;
+			h4 {
+				text-decoration: underline;
+			}
+
+			@media(max-width: 500px) {
+				flex-direction: column;
+				div {
+					margin: 2% 0;
+				}
+			}
+		} //job title
+
+		p {
+			line-height: 1.4;
+
+			@media(max-width: 500px) {
+				margin: 0 3%;
+			}
+		}
+
+		@media(max-width: 500px) {
+			width: 90vw;
+		}
+
+	}
+} //employment history
+
+#education {
+	.centeredColumn;
+	width: 100%;
+
+	h2 {
+		.contentHeaderSpacing;
+	} //h2
+
+	.credential {
+		margin: 1% 0;
+		width: 40vw;
+		line-height: 1.5;
+
+		@media(max-width: 500px) {
+			width: 90vw;
+		}
+	}
+
+} //education
+
+#skills {
+	.centeredColumn;
+
+	h2 {
+		.contentHeaderSpacing;
+	} //h2
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		list-style-type: circle;
+		width: 40vw;
+
+		li {
+			width: 50%;
+			padding: 1% 0%;
+			align-items: center;
+
+			@media(max-width: 500px) {
+				width: 60%;
+			}
+		}
+
+		@media(max-width: 500px) {
+			width: 90vw;
+		}
+	}
+} //skills
+
+footer {
+	background-color: @headerBackground;
+	
+	.footer-contact {
+		display: flex;
+		justify-content: space-around;
+		font-size: 2rem;
+		padding: 2% 0 2% 0;
+		margin: 3% 0 0 0;
+
+		@media(max-width: 500px){
+			flex-direction: column;
+			align-items: center;
+			
+			a {
+				margin: 1% 0;
+			}
+		}
+	}
+}
