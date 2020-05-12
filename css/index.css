@@ -134,31 +134,36 @@ html,
 body {
   height: 100%;
   font-family: 'Cormorant Garamond', serif;
+  line-height: 1.2;
 }
 html {
   font-size: 62.5%;
-}
-h1 h2 h3 h4 h5 h6 {
-  font-family: 'Rubik', sans-serif;
 }
 h2 {
   font-size: 3rem;
 }
 h3 {
   font-size: 2.5rem;
+  font-weight: 400;
 }
 h4 {
   font-size: 2rem;
 }
-p {
+p,
+span {
   font-size: 2rem;
 }
+li {
+  font-size: 2rem;
+}
+a {
+  text-decoration: none;
+}
 header {
+  background-color: darkgrey;
   display: flex;
   flex-direction: column;
-  width: 100%;
   align-items: center;
-  background-color: darkgrey;
 }
 header h1 {
   font-size: 5rem;
@@ -184,11 +189,6 @@ header address .contact-info {
 header address .contact-info #github-link {
   margin-left: 5%;
 }
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .profile {
   display: flex;
   flex-direction: column;
@@ -201,4 +201,71 @@ header address .contact-info #github-link {
 }
 .profile p {
   padding: 0 0 1% 0;
+}
+.employment-history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.employment-history h2 {
+  margin: 2% 0;
+  background-color: darkgrey;
+  padding: 0.5% 10%;
+}
+.employment-history .job {
+  margin: 1% 0;
+  width: 40vw;
+}
+.employment-history .job .job-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2%;
+}
+.education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.education h2 {
+  margin: 2% 0;
+  background-color: darkgrey;
+  padding: 0.5% 10%;
+}
+.education .credential {
+  margin: 1% 0;
+  width: 40vw;
+  line-height: 1.5;
+}
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills h2 {
+  margin: 2% 0;
+  background-color: darkgrey;
+  padding: 0.5% 10%;
+}
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style-type: circle;
+  width: 40vw;
+}
+.skills ul li {
+  width: 50%;
+  padding: 1% 0%;
+  align-items: center;
+}
+footer {
+  background-color: darkgrey;
+}
+footer .footer-contact {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2.5rem;
+  padding: 2% 0 2% 0;
+  margin: 3% 0 0 0;
 }

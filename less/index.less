@@ -48,11 +48,25 @@ table {
 	border-spacing: 0;
 }
 
-// Variables
+// Variables and mixins
 
 @titleFont: 'Lora', serif; // for for my name
-@headingFont: 'Rubik', sans-serif; // fonts for headings
+// @headingFont: 'Rubik', sans-serif; // fonts for headings
 @generalFont: 'Cormorant Garamond', serif; // for use everywhere else
+@headerBackground: darkgrey;
+@borderColor: black;
+
+.centeredColumn() {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contentHeaderSpacing() {
+	margin: 2% 0;
+	background-color: darkgrey;
+	padding: .5% 10%;
+}
 
 /* Set every element's box-sizing to border-box */
 * {
@@ -62,54 +76,60 @@ table {
 html, body {
 	height: 100%;
 	font-family: @generalFont;
-}
+	line-height: 1.2;
+} // html and body
 
 // General stylings
 html {
 	font-size: 62.5%;
-}
+} //html
 
-h1 h2 h3 h4 h5 h6 {
-	font-family: @headingFont;
-}
+// h2, h3, h4, h5, h6 {
+// 	font-family: @headingFont;
+// } // headers
 
 h2 {
 	font-size: 3rem;
-}
+} //h2
 
 h3 {
 	font-size: 2.5rem;
-}
+	font-weight: 400;
+} //h3
 
 h4 {
 	font-size: 2rem;
-}
-p {
-	font-size: 2rem;
-}
+} //h4
 
+p, span {
+	font-size: 2rem;
+} //p
+
+li {
+	font-size: 2rem;
+} //li
+
+a {
+	text-decoration: none;
+}
 // Header Stylings
 header {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	align-items: center;
-	background-color: darkgrey;
+
+	background-color: @headerBackground;
+	.centeredColumn;
 
 	h1 {
 		font-size: 5rem;
 		font-family: @titleFont;
 		padding: 2.5% 0 0 0;
-	}
+	} //h1
 	
 	h3 {
 		padding: 1% 0;
-	}
+	} //h3
 
 	address {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		.centeredColumn;
 		font-size: 2rem;
 		width: 100%;
 
@@ -121,32 +141,97 @@ header {
 
 			#github-link {
 				margin-left: 5%;
-			}
-		}
-	}
-}
+			} //github link
+		} //contact info
+	} //address
+} //header
 
 //content style
 
-.content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+// .content {
+// 	.centeredColumn;
+// }
+
 //Profile section
 
 .profile {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	border-top: 3px black solid;
-	border-bottom: 3px black solid;
+	.centeredColumn;
+	border-top: 3px @borderColor solid;
+	border-bottom: 3px @borderColor solid;
 
 	h2 {
 		padding: 2.5% 0;
-	}
+	} //h2
 
 	p {
 		padding: 0 0 1% 0;
+	} //p
+}  //profile
+
+.employment-history {
+	.centeredColumn;
+
+	h2 {
+		.contentHeaderSpacing;
+	} //h2
+
+	.job {
+		margin: 1% 0;
+		width: 40vw;
+		.job-title {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 2%;
+		}
+	}
+} //employment history
+
+.education {
+	.centeredColumn;
+	width: 100%;
+
+	h2 {
+		.contentHeaderSpacing;
+	} //h2
+
+	.credential {
+		margin: 1% 0;
+		width: 40vw;
+		line-height: 1.5;
+	}
+
+} //education
+
+.skills {
+	.centeredColumn;
+
+	h2 {
+		.contentHeaderSpacing;
+	} //h2
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		list-style-type: circle;
+		width: 40vw;
+
+		li {
+			width: 50%;
+			padding: 1% 0%;
+			align-items: center;
+		}
+	}
+} //skills
+
+footer {
+	background-color: @headerBackground;
+	
+	.footer-contact {
+		display: flex;
+		justify-content: space-around;
+		font-size: 2.5rem;
+		padding: 2% 0 2% 0;
+		margin: 3% 0 0 0;
 	}
 }
